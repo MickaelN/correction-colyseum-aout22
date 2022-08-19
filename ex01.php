@@ -3,7 +3,7 @@ try {
     /** @var PDO $pdo  
      * Instance de l'objet PDO
      */
-    $pdo = new PDO('mysql:host=localhost;dbname=colyseum', 'root');
+    $pdo = new PDO('mysql:host=localhost;dbname=colyseum;charset=utf8', 'root');
     /**
      * PDO::ATTR_ERRMODE et PDO::ERRMODE_EXCEPTION permettent de spécifier à PDO que l'on veux des Exceptions à la place des erreurs PHP. Cela va permettre de les attraper dans le catch.
      */
