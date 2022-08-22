@@ -1,31 +1,6 @@
 <?php
-try {
-    /** @var PDO $pdo  
-     * Instance de l'objet PDO
-     */
-    $pdo = new PDO('mysql:host=localhost;dbname=colyseum;charset=utf8', 'root');
-    /**
-     * PDO::ATTR_ERRMODE et PDO::ERRMODE_EXCEPTION permettent de spécifier à PDO que l'on veux des Exceptions à la place des erreurs PHP. Cela va permettre de les attraper dans le catch.
-     */
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    /**
-     * Création de la requête SQL
-     */
-    $query = 'SELECT `id`, `lastName`, `firstName`, `birthDate`, `card`, `cardNumber` FROM `clients`';
-    /**
-     * $queryResult devient une instance de l'objet PCOStatement
-     * $pdo->query() execute la requête SQL
-     */
-    $queryResult = $pdo->query($query);
-    /**
-     * Le fetchAll permet de récupérer un tableau avec les valeurs de la BDD
-     * Le paramètre PDO::FETCH_OBJ permet de spécifier que le tableau de retour doit contenir un objet avec des attributs correspondant aux champs de la BDD.
-     */
-    $clientList = $queryResult->fetchAll(PDO::FETCH_OBJ);
-} catch (PDOException $error) {
-    die('Erreur : ' . $error->getMessage());
-}
-
+require 'models/Clients.php';
+require 'controllers/ex01Ctrl.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
