@@ -34,4 +34,9 @@ class Clients extends Db
         $query = 'SELECT `cli`.`id`, `cli`.`lastName`, `cli`.`firstName`, `cli`.`birthDate`, `cli`.`card`, `cli`.`cardNumber` FROM `clients` AS `cli` INNER JOIN `cards` AS `ca` ON `cli`.`cardNumber` = `ca`.`cardNumber` WHERE `ca`.`cardTypesId` = 1';
         return $this->getQueryResult($query);
     }
+
+    public function getClientWithM():array{
+        $query = 'SELECT `lastName`, `firstName` FROM `clients` WHERE `lastName` LIKE \'M%\'';
+        return $this->getQueryResult($query);
+    }
 }
