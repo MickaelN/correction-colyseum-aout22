@@ -1,7 +1,7 @@
 <?php
 require 'models/Db.php';
 require 'models/Clients.php';
-require 'controllers/ex01Ctrl.php';
+require 'controllers/ex03Ctrl.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,16 +10,11 @@ require 'controllers/ex01Ctrl.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercice 1</title>
+    <title>Exercice 3</title>
 </head>
 
 <body>
-    <h1>Liste des clients</h1>
     <?php
-    /**
-     * On vérifie d'abord que la requête SQL s'est bien déroulée. 
-     * Si la requête s'est mal faite $clientList sera un false. Dans le cas contraire il sera un tableau
-     */
     if (is_array($clientList)) { ?>
         <table>
             <thead>
@@ -33,7 +28,7 @@ require 'controllers/ex01Ctrl.php';
                 </tr>
             </thead>
             <tbody>
-                <?php 
+                <?php
                 /**
                  * On parcours la liste des clients.
                  */

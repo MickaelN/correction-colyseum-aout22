@@ -1,4 +1,5 @@
 <?php
+require 'models/Db.php';
 require 'models/ShowTypes.php';
 require 'controllers/ex02Ctrl.php';
 ?>
