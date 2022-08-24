@@ -30,4 +30,8 @@ class Clients extends Db
         return $this->getQueryResult($query);
     }
     
+    public function getClientWithFidelityCard() : array{
+        $query = 'SELECT `cli`.`id`, `cli`.`lastName`, `cli`.`firstName`, `cli`.`birthDate`, `cli`.`card`, `cli`.`cardNumber` FROM `clients` AS `cli` INNER JOIN `cards` AS `ca` ON `cli`.`cardNumber` = `ca`.`cardNumber` WHERE `ca`.`cardTypesId` = 1';
+        return $this->getQueryResult($query);
+    }
 }
