@@ -13,6 +13,8 @@
         <li><a href="ex03.php">Exercice 3</a></li>
         <li><a href="ex04.php">Exercice 4</a></li>
         <li><a href="ex05.php">Exercice 5</a></li>
+        <li><a href="ex06.php">Exercice 6</a></li>
+        <li><a href="ex07.php">Exercice 7</a></li>
     </ul>
 </body>
 </html>

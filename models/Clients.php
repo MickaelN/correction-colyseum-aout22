@@ -36,7 +36,7 @@ class Clients extends Db
     }
 
     public function getClientWithM():array{
-        $query = 'SELECT `lastName`, `firstName` FROM `clients` WHERE `lastName` LIKE \'M%\'';
+        $query = 'SELECT `lastName`, `firstName` FROM `clients` WHERE `lastName` LIKE \'M%\' ORDER BY `lastName` ASC';
         return $this->getQueryResult($query);
     }
 }
